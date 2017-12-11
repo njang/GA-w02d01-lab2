@@ -204,3 +204,28 @@ const momentum = (obj) => {
 }
 console.log("The difference between Jupiter's momentum and Pluto's momentum: " + (momentum(system.Jupiter) - momentum(system.Pluto)));
 // console.log((solarSystem.Jupiter.velocity * solarSystem.Jupiter.mass) - (solarSystem.Pluto.velocity * solarSystem.Pluto.mass));
+
+
+
+// ### Planet X
+// Outside of any of these predefined solar system objects, make your own object called **PlanetX**. Give PlanetX the same properties as a planet within `system` (eg. density, tilt, mass) and give it made-up values.
+const planetX = { 
+    radiusp: 'same',
+    name: 'Pluto',
+    density: 200,
+    tilt: 180,
+    image: 'textures/planetX.gif',
+    rotationperiod: 1.75,
+    period: 248.54,
+    radiuse: 116000,
+    satellites: 127,
+    au: 139.48,
+    eccentricity: 27.03,
+    velocity: 28.88,
+    mass: 2000,
+    inclination: 35.25 
+} 
+// Without directly altering either the `system` object or the `PlanetX` object, include planetX as a property of system. (Your planetX object is a planet within the system).
+system.PlanteX = planetX;
+// When you `console.log(system)`, planetX should be appear as a planet in the system.
+console.log(system);
