@@ -229,3 +229,30 @@ const planetX = {
 system.PlanteX = planetX;
 // When you `console.log(system)`, planetX should be appear as a planet in the system.
 console.log(system);
+
+// Extra Challenge
+// 1. use .sort() to sort the solar system array alphabetically according to the name of each planet
+var mapped = system.map(function(el, i) {
+  return { index: i, value: el.toLowerCase() };
+})
+
+// sorting the mapped array containing the reduced values
+mapped.sort(function(a, b) {
+  if (a.value > b.value) {
+    return 1;
+  }
+  if (a.value < b.value) {
+    return -1;
+  }
+  return 0;
+});
+
+// container for the resulting order
+var result = mapped.map(function(el){
+  return list[el.index];
+});
+
+
+
+console.log(system);
+// 2. write a function `sortArrayOfObjects` with two parameters: `arr` and `key` that will sort any array of objects by the `key` input.
